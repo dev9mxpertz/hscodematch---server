@@ -1,0 +1,50 @@
+# Render Blueprint for the HSCodeMatch API.
+# Render → New → Blueprint → pick this repository. Values marked `sync: false`
+# are asked for when the Blueprint is created.
+services:
+  - type: web
+    name: hscodematch-api
+    runtime: node
+    plan: free # "starter" keeps the API awake (free instances sleep after 15 min idle)
+    region: singapore
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 8h
+      - key: USER_JWT_EXPIRES_IN
+        value: 7d
+      - key: CORS_ORIGINS
+        value: https://hscodematch.betamxpertz.co.in
+      - key: SITE_URL
+        value: https://hscodematch.betamxpertz.co.in
+      - key: REVALIDATE_URL
+        value: https://hscodematch.betamxpertz.co.in/api/revalidate/
+      - key: REVALIDATE_SECRET
+        generateValue: true
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_SECURE
+        value: "false"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_FROM
+        value: HSCodeMatch <no-reply@hscodematch.com>
+      - key: NOTIFY_EMAIL
+        value: contact@hscodematch.com
+      - key: LOG_LEVEL
+        value: info

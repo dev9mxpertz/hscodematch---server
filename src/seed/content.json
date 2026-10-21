@@ -1,0 +1,523 @@
+{
+  "posts": [
+    {
+      "slug": "llms-hs-code-classification",
+      "title": "The Future of HS Code Classification: How Large Language Models are Changing the Game",
+      "excerpt": "Discover how the latest advancements in LLMs like GPT-4 are revolutionizing the accuracy and speed of global trade classification processes for importers and brokers alike.",
+      "category": "AI & Automation",
+      "label": "AI & Automation",
+      "tone": "purple",
+      "image": "/blog/containers.jpg",
+      "status": "published",
+      "publishedAt": "2026-03-12"
+    },
+    {
+      "slug": "eu-customs-regulations-2024",
+      "title": "Navigating New EU Customs Regulations for 2024",
+      "excerpt": "A comprehensive guide on the upcoming changes to EU import duties and the mandatory documentation required for seamless customs clearance across member states.",
+      "category": "Trade Compliance",
+      "label": "Compliance Guide",
+      "tone": "lime",
+      "image": "/blog/dashboard.jpg",
+      "status": "published",
+      "publishedAt": "2026-03-08"
+    },
+    {
+      "slug": "hscodematch-api-v3",
+      "title": "Introducing HSCodeMatch API v3: Enhanced Real-Time Support",
+      "excerpt": "Learn about the new features in our latest API release, including batch processing capabilities and improved accuracy for complex chemical compounds.",
+      "category": "Product Updates",
+      "label": "Product Updates",
+      "tone": "purple",
+      "image": "/blog/worldmap.jpg",
+      "status": "published",
+      "publishedAt": "2026-03-05"
+    },
+    {
+      "slug": "logistics-corp-case-study",
+      "title": "Scaling Operations: How Logistics Corp Reduced Errors by 40%",
+      "excerpt": "A deep dive into our partnership with a Tier-1 logistics provider and the measurable impact of automated classification on their bottom line.",
+      "category": "Case Studies",
+      "label": "Case Studies",
+      "tone": "blue",
+      "image": "/blog/port.jpg",
+      "status": "published",
+      "publishedAt": "2026-02-28"
+    },
+    {
+      "slug": "de-minimis-threshold-changes",
+      "title": "The Impact of De Minimis Threshold Changes on E-commerce",
+      "excerpt": "Understanding the legal implications of shifting de minimis values and what it means for small businesses importing goods internationally.",
+      "category": "Customs Law",
+      "label": "Customs Law",
+      "tone": "green",
+      "image": "/blog/building.jpg",
+      "status": "published",
+      "publishedAt": "2026-02-22"
+    },
+    {
+      "slug": "dashboard-analytics-workspace",
+      "title": "HSCodeMatch Dashboard: New Analytics Workspace",
+      "excerpt": "We've updated our user dashboard with deep analytics, allowing you to track classification trends and export compliance reports with a single click.",
+      "category": "Product Updates",
+      "label": "Product Updates",
+      "tone": "purple",
+      "image": "/blog/laptop.jpg",
+      "status": "published",
+      "publishedAt": "2026-02-15"
+    },
+    {
+      "slug": "warehouse-classification-checklist",
+      "title": "A Warehouse Manager's Checklist for Accurate Classification",
+      "excerpt": "Seven practical checks your receiving team can run to catch misclassified SKUs before they reach the customs broker.",
+      "category": "Global Logistics",
+      "label": "Global Logistics",
+      "tone": "orange",
+      "image": "/blog/warehouse.jpg",
+      "status": "published",
+      "publishedAt": "2026-02-09"
+    },
+    {
+      "slug": "port-congestion-2026",
+      "title": "Port Congestion in 2026: What Importers Should Plan For",
+      "excerpt": "Shipping lanes are shifting again. Here's how to build buffer time and documentation readiness into your supply chain.",
+      "category": "Global Logistics",
+      "label": "Global Logistics",
+      "tone": "orange",
+      "image": "/blog/ship.jpg",
+      "status": "published",
+      "publishedAt": "2026-02-02"
+    },
+    {
+      "slug": "gri-rules-explained",
+      "title": "The General Rules of Interpretation, Explained Simply",
+      "excerpt": "GRI 1 through 6 decide every HS classification. We break each rule down with real product examples you can apply today.",
+      "category": "Trade Compliance",
+      "label": "Compliance Guide",
+      "tone": "lime",
+      "image": "/blog/containers.jpg",
+      "status": "published",
+      "publishedAt": "2026-01-27"
+    },
+    {
+      "slug": "ai-confidence-scores",
+      "title": "Reading AI Confidence Scores: When to Trust and When to Review",
+      "excerpt": "Confidence isn't certainty. Learn how our scoring works and set review thresholds that balance speed and risk.",
+      "category": "AI & Automation",
+      "label": "AI & Automation",
+      "tone": "purple",
+      "image": "/blog/dashboard.jpg",
+      "status": "published",
+      "publishedAt": "2026-01-20"
+    },
+    {
+      "slug": "binding-tariff-information",
+      "title": "Binding Tariff Information: Is It Worth Applying?",
+      "excerpt": "BTI rulings give legal certainty but take time. We look at when the investment pays off and how to prepare a strong application.",
+      "category": "Customs Law",
+      "label": "Customs Law",
+      "tone": "green",
+      "image": "/blog/building.jpg",
+      "status": "published",
+      "publishedAt": "2026-01-13"
+    },
+    {
+      "slug": "retailer-case-study",
+      "title": "How a Home Goods Retailer Classified 12,000 SKUs in a Week",
+      "excerpt": "Bulk upload, AI suggestions and a two-person review team: the workflow that replaced three months of manual lookups.",
+      "category": "Case Studies",
+      "label": "Case Studies",
+      "tone": "blue",
+      "image": "/blog/warehouse.jpg",
+      "status": "published",
+      "publishedAt": "2026-01-06"
+    },
+    {
+      "slug": "tariff-alerts-launch",
+      "title": "Launching Tariff Alerts: Never Miss a Duty Change Again",
+      "excerpt": "Get notified the moment a tariff that affects your catalog changes in any of 173 countries.",
+      "category": "Product Updates",
+      "label": "Product Updates",
+      "tone": "purple",
+      "image": "/blog/worldmap.jpg",
+      "status": "published",
+      "publishedAt": "2025-12-18"
+    },
+    {
+      "slug": "origin-rules-fta",
+      "title": "Rules of Origin: Unlocking Free Trade Agreement Savings",
+      "excerpt": "Many importers leave FTA savings on the table. Learn how origin rules work and how to document qualifying goods.",
+      "category": "Trade Compliance",
+      "label": "Compliance Guide",
+      "tone": "lime",
+      "image": "/blog/port.jpg",
+      "status": "published",
+      "publishedAt": "2025-12-10"
+    }
+  ],
+  "plans": [
+    {
+      "kind": "app",
+      "name": "Free Trial",
+      "price": 0,
+      "period": "14 days",
+      "description": "Try every core feature before you commit.",
+      "features": ["50 HS Code Lookups", "Basic Country Coverage", "Standard AI Suggestion"],
+      "cta": {
+        "label": "Start Trial",
+        "href": "#app"
+      },
+      "popular": false,
+      "order": 0
+    },
+    {
+      "kind": "app",
+      "name": "Starter",
+      "price": 36,
+      "period": "month",
+      "description": "For small sellers getting started with imports.",
+      "features": ["500 Lookups /mo", "150+ Countries", "WCO Database Access", "Email Support"],
+      "cta": {
+        "label": "Select Starter",
+        "href": "#app"
+      },
+      "popular": false,
+      "order": 1
+    },
+    {
+      "kind": "app",
+      "name": "Premium",
+      "price": 125,
+      "period": "month",
+      "description": "For growing brands shipping to multiple markets.",
+      "features": [
+        "2,500 Lookups /mo",
+        "Batch Upload Feature",
+        "Advanced AI Rationale",
+        "Binding Rulings History",
+        "Priority Chat Support"
+      ],
+      "cta": {
+        "label": "Upgrade to Premium",
+        "href": "#app"
+      },
+      "popular": true,
+      "order": 2
+    },
+    {
+      "kind": "app",
+      "name": "Business",
+      "price": 520,
+      "period": "month",
+      "description": "For brokers and large catalogs with team workflows.",
+      "features": [
+        "10,000 Lookups /mo",
+        "Custom Logic Mapping",
+        "Team Collaboration (5 seats)",
+        "Audit Log Export",
+        "Dedicated Account Manager"
+      ],
+      "cta": {
+        "label": "Contact Sales",
+        "href": "/contact"
+      },
+      "popular": false,
+      "order": 3
+    },
+    {
+      "kind": "api",
+      "name": "Sandbox",
+      "price": 0,
+      "period": "14 days",
+      "description": "Test the API in a sandbox environment.",
+      "features": ["1,000 API Calls", "Test Environment", "Community Support"],
+      "cta": {
+        "label": "Get API Key",
+        "href": "#app"
+      },
+      "popular": false,
+      "order": 0
+    },
+    {
+      "kind": "api",
+      "name": "Developer",
+      "price": 79,
+      "period": "month",
+      "description": "For a single integration in production.",
+      "features": ["10,000 API Calls /mo", "150+ Countries", "Tariff Endpoints", "Email Support"],
+      "cta": {
+        "label": "Select Developer",
+        "href": "#app"
+      },
+      "popular": false,
+      "order": 1
+    },
+    {
+      "kind": "api",
+      "name": "Growth",
+      "price": 299,
+      "period": "month",
+      "description": "For high-volume classification pipelines.",
+      "features": [
+        "50,000 API Calls /mo",
+        "Batch Endpoint",
+        "AI Rationale in Response",
+        "Webhooks & Alerts",
+        "Priority Chat Support"
+      ],
+      "cta": {
+        "label": "Upgrade to Growth",
+        "href": "#app"
+      },
+      "popular": true,
+      "order": 2
+    },
+    {
+      "kind": "api",
+      "name": "Enterprise",
+      "price": 990,
+      "period": "month",
+      "description": "Dedicated infrastructure and SLAs.",
+      "features": [
+        "Unlimited API Calls",
+        "99.9% Uptime SLA",
+        "Dedicated Infrastructure",
+        "SSO & User Roles",
+        "Dedicated Account Manager"
+      ],
+      "cta": {
+        "label": "Contact Sales",
+        "href": "/contact"
+      },
+      "popular": false,
+      "order": 3
+    }
+  ],
+  "services": [
+    {
+      "category": "Developer API",
+      "title": "Custom API Development",
+      "description": "Build API customization to optimize your business needs.",
+      "href": "/support",
+      "order": 0
+    },
+    {
+      "category": "Developer API",
+      "title": "Public API Documentation",
+      "description": "Discover available API documentation to retrieve international trade data.",
+      "href": "/pricing?plan=api",
+      "order": 1
+    },
+    {
+      "category": "Regulations",
+      "title": "Data Coverage",
+      "description": "Track specific HS code data coverage for your business needs.",
+      "href": "/blog",
+      "order": 2
+    },
+    {
+      "category": "How to Guide",
+      "title": "How to Track API Usage",
+      "description": "Monitor your API credit consumption in real-time.",
+      "href": "/blog",
+      "order": 3
+    },
+    {
+      "category": "How to Guide",
+      "title": "How to Start API Subscription",
+      "description": "Get started with our API from account creation to integration.",
+      "href": "/pricing?plan=api",
+      "order": 4
+    },
+    {
+      "category": "HS Code & Tariffs",
+      "title": "Find Best Tariffs",
+      "description": "Find best and accurate tariffs for international trade instantly.",
+      "href": "/pricing",
+      "order": 5
+    },
+    {
+      "category": "Artificial Intelligence",
+      "title": "AI HS Code Classification",
+      "description": "Describe a product in plain language and get ranked HS codes with reasoning.",
+      "href": "/pricing",
+      "order": 6
+    },
+    {
+      "category": "Artificial Intelligence",
+      "title": "Smart Product Monitoring",
+      "description": "Get alerted when tariff or regulation changes affect your catalog.",
+      "href": "/pricing",
+      "order": 7
+    },
+    {
+      "category": "Regulations",
+      "title": "Regulation Tracker",
+      "description": "Follow 101+ regulation articles across the markets you ship to.",
+      "href": "/blog",
+      "order": 8
+    }
+  ],
+  "faqs": [
+    {
+      "page": "home",
+      "question": "What is an HS code and why does it matter?",
+      "answer": "The Harmonized System (HS) code is a standardised number used worldwide to classify traded goods. It decides the duty you pay, which regulations apply and whether your shipment clears customs smoothly. A wrong code can mean overpaid duty, delays or penalties.",
+      "order": 0
+    },
+    {
+      "page": "home",
+      "question": "How accurate is HSCodeMatch?",
+      "answer": "Our engine reaches around 98% accuracy at the 6-digit level on benchmark data. Every suggestion includes a confidence score and the reasoning behind it, so your team can review edge cases quickly.",
+      "order": 1
+    },
+    {
+      "page": "home",
+      "question": "Can I classify products in bulk?",
+      "answer": "Yes. On the Premium and Business plans you can upload a CSV or connect via API to classify thousands of SKUs at once.",
+      "order": 2
+    },
+    {
+      "page": "home",
+      "question": "Which countries' tariff schedules are supported?",
+      "answer": "We support national tariff schedules for 150+ countries, including the US HTS, EU TARIC, UK Global Tariff, China, Japan and India.",
+      "order": 3
+    },
+    {
+      "page": "home",
+      "question": "Is there a free trial?",
+      "answer": "Every account starts with a 14-day free trial. No credit card is required and you can cancel anytime.",
+      "order": 4
+    },
+    {
+      "page": "pricing",
+      "question": "What kind of support is included?",
+      "answer": "We offer tier-based support depending on your plan:\n\n- Free plan users get access to community forums and our self-serve Help Center.\n- Pro & Business users enjoy priority email support and live chat during business hours.\n- Enterprise plans come with a dedicated success manager and 24/7 assistance.\n\n📌 Need more details? [View our full support options in the Help Center →](/support)",
+      "order": 0
+    },
+    {
+      "page": "pricing",
+      "question": "Can I switch plans mid-billing cycle?",
+      "answer": "Yes. Upgrades take effect immediately and are prorated. Downgrades apply from your next billing date, so you keep everything you've paid for.",
+      "order": 1
+    },
+    {
+      "page": "pricing",
+      "question": "How do API lookups count against my limit?",
+      "answer": "Each successful classification request counts as one lookup. Batch requests count one lookup per product in the batch. Failed or invalid requests are never charged.",
+      "order": 2
+    },
+    {
+      "page": "pricing",
+      "question": "Does the software provide binding legal advice?",
+      "answer": "No. HSCodeMatch gives AI-assisted recommendations with supporting rationale. For legally binding decisions, request a Binding Tariff Information ruling from the relevant customs authority.",
+      "order": 3
+    },
+    {
+      "page": "pricing",
+      "question": "Is there a discount for annual billing?",
+      "answer": "Yes — yearly billing saves 20% compared with paying month to month.",
+      "order": 4
+    },
+    {
+      "page": "pricing",
+      "question": "What payment methods do you accept?",
+      "answer": "All major credit cards, plus bank transfer and invoicing for Business and Enterprise plans.",
+      "order": 5
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "HSCodeMatch reduced our classification time by 80%. We've eliminated errors that used to cause major delays at European customs.",
+      "name": "Elena Rodriguez",
+      "role": "Logistics Director, GlobalTrade Inc.",
+      "avatarClassName": "from-[#3b82f6] to-[#1e3a8a]",
+      "rating": 5,
+      "order": 0
+    },
+    {
+      "quote": "The API is incredibly stable and fast. Integrating HSCodeMatch into our ERP was the best tech decision we made this year.",
+      "name": "Markus Weber",
+      "role": "CTO, SupplyChain Dynamics",
+      "avatarClassName": "from-[#f59e0b] to-[#b45309]",
+      "rating": 5,
+      "order": 1
+    },
+    {
+      "quote": "A mandatory tool for any trade professional. The accuracy of their neural matching for complex chemical components is unmatched.",
+      "name": "Sarah Chen",
+      "role": "Compliance Officer, PetroGen",
+      "avatarClassName": "from-[#94a3b8] to-[#475569]",
+      "rating": 5,
+      "order": 2
+    }
+  ],
+  "settings": {
+    "links": {
+      "app": "#app",
+      "demoVideo": "https://www.youtube.com"
+    },
+    "contact": {
+      "email": "contact@hscodematch.com",
+      "supportEmail": "support@hscodematch.com",
+      "responseTime": "Our team responds within 24 hours.",
+      "officeDays": "Mon - Fri",
+      "officeTime": "9:00 AM - 6:00 PM EST"
+    },
+    "headOffice": {
+      "name": "Head Office",
+      "address": "Pier71, 71 Ayer Rajah Crescent, Singapore 139951",
+      "shortAddress": "71 Ayer Rajah Crescent, #02-15, Singapore 139951",
+      "hours": "Monday – Friday: 9 AM to 8 PM SGT",
+      "mapEmbedUrl": "https://www.google.com/maps?q=Pier71,+71+Ayer+Rajah+Crescent,+Singapore+139951&z=15&output=embed"
+    },
+    "secondOffice": "Innovation Hub, New York, NY",
+    "addressNote": "123 Compliance Way, Suite 500",
+    "socials": {
+      "linkedin": "https://www.linkedin.com",
+      "instagram": "https://www.instagram.com",
+      "x": "https://x.com"
+    },
+    "home": {
+      "highlights": ["No credit card required", "14-day free trial", "Cancel anytime"],
+      "stats": [
+        {
+          "value": "98%",
+          "label": "Classification accuracy"
+        },
+        {
+          "value": "5M+",
+          "label": "Products classified"
+        },
+        {
+          "value": "180+",
+          "label": "Countries supported"
+        },
+        {
+          "value": "70%",
+          "label": "Faster than manual lookup"
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "slug": "about",
+      "title": "About HSCodeMatch",
+      "summary": "We help importers, exporters and customs brokers classify products accurately and quickly.",
+      "body": "HSCodeMatch combines the Harmonized System nomenclature, national tariff schedules and customs rulings with AI to suggest the right HS code for any product description — with the reasoning behind every match.\n\n## Our mission\n\nCustoms classification decides the duty you pay, the paperwork you need and the risk you carry. We want every trade team, from a one-person exporter to a global broker, to classify with the confidence of a specialist.\n\n## What we offer\n\n- **AI classification** with confidence scores and alternative headings\n- **Tariff and duty lookups** for 180+ countries\n- **A developer API** to classify products inside your own systems\n- **Expert support** from licensed customs professionals\n\n## Company\n\nHSCodeMatch is built by Jureem Pte. Ltd., headquartered in Singapore. [Contact us](/contact/) to talk to our team."
+    },
+    {
+      "slug": "terms",
+      "title": "Terms of Service",
+      "summary": "The terms that apply when you use the HSCodeMatch website and services.",
+      "body": "These terms govern your use of the HSCodeMatch website, applications and API (the “Services”), provided by Jureem Pte. Ltd. By creating an account or using the Services you agree to them.\n\n## Accounts\n\nYou are responsible for the information you provide and for keeping your password secure. Tell us straight away if you suspect unauthorised use of your account.\n\n## Use of classification results\n\nHSCodeMatch provides classification suggestions to support your decisions. Final responsibility for the codes declared to customs authorities remains with the importer, exporter or their appointed broker. Always check results against official rulings for high-value or sensitive shipments.\n\n## Subscriptions and billing\n\nPaid plans renew automatically at the end of each billing period unless cancelled. Prices are shown on the [pricing page](/pricing/) and may change with notice.\n\n## Acceptable use\n\n- Do not attempt to access other customers’ data or disrupt the Services\n- Do not resell the Services or API output without written permission\n- Respect the rate limits of your plan\n\n## Liability\n\nTo the extent permitted by law, our liability is limited to the fees you paid in the twelve months before the claim.\n\n## Contact\n\nQuestions about these terms: [contact@hscodematch.com](mailto:contact@hscodematch.com)."
+    },
+    {
+      "slug": "privacy",
+      "title": "Privacy Policy",
+      "summary": "How HSCodeMatch collects, uses and protects your personal data.",
+      "body": "This policy explains what personal data Jureem Pte. Ltd. (“HSCodeMatch”, “we”) collects through our website and services and how we use it.\n\n## Data we collect\n\n- **Account details:** name, email address, company and an encrypted password\n- **Messages:** what you send through our contact and expert inquiry forms\n- **Newsletter:** your email address if you subscribe\n- **Usage data:** basic technical logs needed to run and secure the service\n\n## How we use it\n\nWe use your data to provide the service, answer your requests, send the newsletter you asked for and keep our systems secure. We do not sell personal data.\n\n## Storage and security\n\nData is stored with reputable cloud providers. Passwords are hashed and never stored in plain text. Access is limited to staff who need it.\n\n## Your rights\n\nYou can update your profile from your account page, unsubscribe from the newsletter at any time, and ask us to access or delete your data by emailing [contact@hscodematch.com](mailto:contact@hscodematch.com).\n\n## Changes\n\nWe will post any changes to this policy on this page."
+    }
+  ]
+}

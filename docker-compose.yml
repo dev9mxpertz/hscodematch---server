@@ -1,0 +1,12 @@
+# Runs the API in Docker. Settings come from .env (MongoDB Atlas connection, secrets, SMTP).
+# Put Nginx (deploy/nginx.conf) in front of it for HTTPS.
+services:
+  api:
+    build: .
+    image: hscodematch-api
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+    ports:
+      - "127.0.0.1:4000:4000"
