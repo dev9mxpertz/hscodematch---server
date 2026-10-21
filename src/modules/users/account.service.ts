@@ -114,3 +114,104 @@ export async function resetPassword(token: string, password: string) {
   user.set({ resetTokenHash: undefined, resetTokenExpiresAt: undefined });
   await user.save();
 }
+
+const PLAN_QUOTAS: Record<string, { lookups: number; apiCalls: number }> = {
+  "Free Trial": { lookups: 50, apiCalls: 1000 },
+  Starter: { lookups: 500, apiCalls: 5000 },
+  Premium: { lookups: 2500, apiCalls: 20000 },
+  Business: { lookups: 10000, apiCalls: 50000 },
+  Sandbox: { lookups: 20, apiCalls: 1000 },
+  Developer: { lookups: 500, apiCalls: 10000 },
+  Growth: { lookups: 2500, apiCalls: 50000 },
+  Enterprise: { lookups: 50000, apiCalls: 1000000 },
+};
+
+export async function subscribe(
+  userId: string,
+  input: {
+    planName: string;
+    planKind?: "app" | "api";
+    price: number;
+    period?: "month" | "14 days" | "year";
+    paymentMethod?: string;
+  },
+) {
+  const user = await UserModel.findById(userId);
+  if (!user || user.status === "disabled") throw HttpError.unauthorized("Account not available");
+
+  const quota = PLAN_QUOTAS[input.planName] ?? { lookups: 500, apiCalls: 5000 };
+  const durationDays = input.period === "14 days" ? 14 : input.period === "year" ? 365 : 30;
+  const now = new Date();
+  const renewsAt = new Date(now.getTime() + durationDays * 24 * 60 * 60 * 1000);
+
+  const invoiceNum = `INV-${now.getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
+
+  user.set("subscription", {
+    planName: input.planName,
+    planKind: input.planKind ?? "app",
+    price: input.price,
+    period: input.period ?? "month",
+    status: "active",
+    startDate: now,
+    renewsAt,
+    lookupsLimit: quota.lookups,
+    lookupsUsed: 0,
+    apiCallsLimit: quota.apiCalls,
+    apiCallsUsed: 0,
+  });
+
+  const transaction = {
+    invoiceNumber: invoiceNum,
+    planName: input.planName,
+    amount: input.price,
+    currency: "USD",
+    status: "paid",
+    date: now,
+    paymentMethod: input.paymentMethod || "Credit Card (ending in 4242)",
+  };
+
+  user.transactions.unshift(transaction as any);
+  await user.save();
+  return publicUser(user);
+}
+
+export async function cancelSubscription(userId: string) {
+  const user = await UserModel.findById(userId);
+  if (!user || user.status === "disabled") throw HttpError.unauthorized("Account not available");
+
+  if (user.subscription) {
+    user.subscription.status = "canceled";
+    await user.save();
+  }
+  return publicUser(user);
+}
+
+export async function adminUpdateSubscription(
+  userId: string,
+  input: {
+    planName?: string;
+    planKind?: "app" | "api";
+    status?: "active" | "trialing" | "canceled" | "past_due";
+    price?: number;
+    lookupsLimit?: number;
+    lookupsUsed?: number;
+    apiCallsLimit?: number;
+    apiCallsUsed?: number;
+  },
+) {
+  const user = await UserModel.findById(userId);
+  if (!user) throw HttpError.notFound("User not found");
+
+  if (user.subscription) {
+    if (input.planName) user.subscription.planName = input.planName;
+    if (input.planKind) user.subscription.planKind = input.planKind;
+    if (input.status) user.subscription.status = input.status;
+    if (input.price !== undefined) user.subscription.price = input.price;
+    if (input.lookupsLimit !== undefined) user.subscription.lookupsLimit = input.lookupsLimit;
+    if (input.lookupsUsed !== undefined) user.subscription.lookupsUsed = input.lookupsUsed;
+    if (input.apiCallsLimit !== undefined) user.subscription.apiCallsLimit = input.apiCallsLimit;
+    if (input.apiCallsUsed !== undefined) user.subscription.apiCallsUsed = input.apiCallsUsed;
+  }
+  await user.save();
+  return publicUser(user);
+}

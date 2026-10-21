@@ -75,6 +75,84 @@ accountRouter.post("/change-password", requireUser, async (req, res) => {
   res.json({ data: { changed: true } });
 });
 
+const subscribeSchema = z.object({
+  planName: z.string().min(1),
+  planKind: z.enum(["app", "api"]).optional(),
+  price: z.number().min(0),
+  period: z.enum(["month", "14 days", "year"]).optional(),
+  paymentMethod: z.string().optional(),
+});
+
+accountRouter.post("/subscribe", requireUser, async (req, res) => {
+  const input = parse(subscribeSchema, req.body);
+  res.json({ data: await account.subscribe(res.locals.user.sub, input) });
+});
+
+accountRouter.post("/cancel-subscription", requireUser, async (_req, res) => {
+  res.json({ data: await account.cancelSubscription(res.locals.user.sub) });
+});
+
+/* ---------- /api/v1/admin/subscriptions ---------- */
+
+export const subscriptionAdminRouter = Router();
+
+subscriptionAdminRouter.get("/", async (req, res) => {
+  const { page, limit, status, q } = parse(listQuery, req.query);
+  const filter: Record<string, unknown> = {};
+  if (status) filter["subscription.status"] = status;
+  if (q) {
+    const pattern = new RegExp(escapeRegex(q), "i");
+    filter.$or = [
+      { name: pattern },
+      { email: pattern },
+      { company: pattern },
+      { "subscription.planName": pattern },
+    ];
+  }
+
+  const [items, total] = await Promise.all([
+    UserModel.find(filter)
+      .sort({ updatedAt: -1 })
+      .skip((page - 1) * limit)
+      .limit(limit)
+      .lean(),
+    UserModel.countDocuments(filter),
+  ]);
+
+  res.json({
+    data: items.map((u) => {
+      const pub = publicUser(u);
+      return {
+        id: pub.id,
+        name: pub.name,
+        email: pub.email,
+        company: pub.company,
+        status: pub.status,
+        subscription: pub.subscription,
+        transactions: pub.transactions,
+        createdAt: pub.createdAt,
+      };
+    }),
+    meta: paginationMeta({ page, limit }, total),
+  });
+});
+
+subscriptionAdminRouter.patch("/:id", async (req, res) => {
+  const { id } = parse(objectIdParams, req.params);
+  const updateSchema = z.object({
+    planName: z.string().optional(),
+    planKind: z.enum(["app", "api"]).optional(),
+    status: z.enum(["active", "trialing", "canceled", "past_due"]).optional(),
+    price: z.number().min(0).optional(),
+    lookupsLimit: z.number().min(0).optional(),
+    lookupsUsed: z.number().min(0).optional(),
+    apiCallsLimit: z.number().min(0).optional(),
+    apiCallsUsed: z.number().min(0).optional(),
+  });
+  const input = parse(updateSchema, req.body);
+  res.json({ data: await account.adminUpdateSubscription(id, input) });
+});
+
 /* ---------- /api/v1/admin/users ---------- */
 
 export const userAdminRouter = Router();

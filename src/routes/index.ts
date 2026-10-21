@@ -17,7 +17,11 @@ import {
   newsletterPublicRouter,
   subscriberAdminRouter,
 } from "../modules/submissions/subscriber.js";
-import { accountRouter, userAdminRouter } from "../modules/users/account.routes.js";
+import {
+  accountRouter,
+  subscriptionAdminRouter,
+  userAdminRouter,
+} from "../modules/users/account.routes.js";
 
 /* ---------- public ---------- */
 
@@ -41,6 +45,7 @@ const adminRouter = Router();
 adminRouter.use(requireAdmin);
 adminRouter.use("/stats", statsRouter);
 adminRouter.use("/users", userAdminRouter);
+adminRouter.use("/subscriptions", subscriptionAdminRouter);
 adminRouter.use("/contact-messages", contactAdminRouter);
 adminRouter.use("/inquiries", inquiryAdminRouter);
 adminRouter.use("/subscribers", subscriberAdminRouter);
